@@ -1,7 +1,7 @@
 # DIGITAL FORENSIC EXAMINATION REPORT
 Forensic Analysis of a USB Storage Device
 Forensic Image Reference: cartel.img
-CASE EXERCISE: CAPTURE THE FLAG
+# CASE EXERCISE: CAPTURE THE FLAG
 
 # Digital Forensics Examination Report
 
