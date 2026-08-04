@@ -67,6 +67,25 @@ All commands and their outputs referenced throughout this report were captured d
 
 # Chain of Custody
 The forensic image cartel.img was derived from a USB storage device seized by EFCC officers on 2 August 2026 at 09:15 AM, pursuant to a search warrant. Examination of the image was conducted on 3 August 2026. Beyond the seizure date, seizing authority, and examination date stated above, no further chain-of-custody documentation (e.g., evidence transfer logs, storage location, or intermediate custodians) was provided as part of this exercise; this report makes no assumptions regarding those details.
+# CHAIN OF CUSTODY FORM
+
+| **Field**                     | **Details**                                                                                                                                                                                                              |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Case Number**               | ____________________                                                                                                                                                                                                     |
+| **Item Number**               | 1                                                                                                                                                                                                                        |
+| **Evidence Description**      | During an internal investigation, an Eaglet Silver USB flash drive was discovered. This USB flash drive contains evidence relevant to the investigation.                                                                 |
+| **Forensic Imaging Activity** | **23/07/2026:** Bit-by-bit forensic image created as `cartel.img`. The original USB was returned to a sealed evidence bag. The forensic image was stored on the analysis workstation, and the SHA-256 hash was verified. |
+| **Collection Method**         | Collected from the scene, photographed, labeled, and packaged before forensic imaging.                                                                                                                                   |
+| **Evidence Storage Method**   | Stored in a sealed plastic zip-lock evidence bag.                                                                                                                                                                        |
+| **How is Evidence Secured?**  | Stored in a sealed plastic zip-lock evidence bag.                                                                                                                                                                        |
+| **Collected By (Name/ID)**    | **Harmony Umoren**     **ID:** Null                                                                                                                                                                                      |
+| **Signature of Collector**    | ____________________                                                                                                                                                                                                     |
+| **Evidence Item**             | Silver-colour Eaglet USB Flash Drive                                                                                                                                                                                     |
+| **Date**                      | 23/07/2026                                                                                                                                                                                                               |
+| **Time (Local)**              | 9:15 AM                                                                                                                                                                                                                  |
+| **Time (UTC)**                | 8:15 AM UTC                                                                                                                                                                                                              |
+| **Examiner / Collector**      | **Harmony Umoren**                                                                                                                                                                                                       |
+| **Location**                  | No. 1, Kaduna Street, D-Line, Port Harcourt, Rivers State.                                                                                                                                                               |
 
 # Evidence Verification
 - Purpose
