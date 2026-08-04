@@ -104,6 +104,9 @@ The hash values recorded above represent the values calculated for the image as 
 | **`img_stat cartel.img`**              | **Image Type:** Raw<br>**Image Size:** 259,506,176 bytes (≈247.5 MB)<br>**Sector Size:** 512 bytes                                                                                                  |
 | **`fsstat cartel.img`**                | **File System Type:** FAT16<br>**OEM Name:** `mkdosfs`<br>**Volume ID:** `0x4092d9d1`<br>**File System Type Label:** FAT16                                                                          |
 | **File System Layout (from `fsstat`)** | **Total Sector Range:** 0–506,847<br>**Reserved Area:** 0–0<br>**FAT 0:** 1–248<br>**FAT 1:** 249–496<br>**Data Area:** 497–506,847<br>**Root Directory:** 497–528<br>**Cluster Area:** 529–506,840 |
+<img width="975" height="292" alt="image" src="https://github.com/user-attachments/assets/6b37dc1b-0407-4229-9d7e-179906aa4b82" />
+<img width="975" height="719" alt="image" src="https://github.com/user-attachments/assets/13ac8705-97c6-44d1-8209-844b01aa8853" />
+<img width="975" height="397" alt="image" src="https://github.com/user-attachments/assets/8f37ad20-3dd1-4b93-81af-0f9703163f1f" />
 
 ## Why These Preliminary Steps Are Necessary
 Initial triage helps the examiner understand the structure and characteristics of the forensic image before performing a detailed investigation. It identifies the image format, file system, partition layout, and storage information, allowing the examiner to choose the correct forensic tools and examination methods. Performing this step reduces the risk of analysing the wrong data, misinterpreting the file system, or producing inaccurate results. It also provides a clear understanding of how the evidence is organized, making subsequent analysis and data recovery more effective.
@@ -125,6 +128,9 @@ The files were identified by performing a recursive directory listing using fls,
 | **`fls cartel.img`**     | **Allocated Files:**<br>• Directory Entry **4** – `GUMBO1.TXT`<br>• Directory Entry **6** – `GUMBO2.TXT`<br><br>**Virtual File System Entries:**<br>• `$MBR`<br>• `$FAT1`<br>• `$FAT2`<br>• `$OrphanFiles`            |
 | **`istat cartel.img 4`** | **Directory Entry:** 4 (Allocated)<br>**File Name:** `GUMBO1.TXT`<br>**Attributes:** File, Archive<br>**File Size:** 2,815 bytes<br>**Created:** 2004-04-30 18:11:20 UTC<br>**Last Written:** 2004-04-30 18:11:20 UTC |
 | **`istat cartel.img 6`** | **Directory Entry:** 6 (Allocated)<br>**File Name:** `GUMBO2.TXT`<br>**Attributes:** File, Archive<br>**File Size:** 1,293 bytes<br>**Created:** 2004-04-30 18:11:24 UTC<br>**Last Written:** 2004-04-30 18:11:24 UTC |
+<img width="975" height="214" alt="image" src="https://github.com/user-attachments/assets/46535b84-92ef-4ad5-a8eb-346e8e095666" />
+<img width="975" height="290" alt="image" src="https://github.com/user-attachments/assets/9595b0e7-4d26-4904-bab2-e7c521b5850f" />
+<img width="975" height="283" alt="image" src="https://github.com/user-attachments/assets/f0fcbc77-2a01-40db-aef8-a545863d433b" />
 
 ## Artifact 2: Extensive ASCII Overwrite Pattern
 
@@ -145,6 +151,9 @@ The overwrite pattern was identified through forensic examination of unallocated
 | **Data at Offset 54,800,000**              | `b'CHARLIE\nCHARLIE\nCHARLIE\nCHARLIE\n'` — confirms the presence of repeated **"CHARLIE"** strings within the image. |
 | **Pattern Boundary Analysis (Regex Scan)** | **SORRY**<br>• Occurrences: **8,835,577**<br>• Offset Range: **273,663 – 54,735,350**                                 |
 | **Pattern Boundary Analysis (Regex Scan)** | **CHARLIE**<br>• Occurrences: **18,372,608**<br>• Offset Range: **54,735,356 – 203,186,168**                          |
+<img width="975" height="189" alt="image" src="https://github.com/user-attachments/assets/6720979e-a9d7-4687-ab86-580f1e6a847c" />
+<img width="975" height="222" alt="image" src="https://github.com/user-attachments/assets/2ad18c75-2e4b-4c83-9bc3-115cecab0f3d" />
+<img width="975" height="256" alt="image" src="https://github.com/user-attachments/assets/7674aa54-2a6a-44c7-a70f-db86beeeca66" />
 
 ## Artifact 3: Recovered Image Files from an Unaffected Storage Region
 
@@ -171,6 +180,8 @@ The image files were identified by scanning unallocated space with Binwalk, whic
 | **Recovered File 8**      | **00106889.gif** — GIF image, **4 KB**, Offset: **54,727,168 bytes**, Resolution: **150 × 87 pixels**   |
 | **Recovered File 9**      | **00335081.jpg** — JPEG image, **258 KB**, Offset: **171,561,472 bytes**                                |
 | **Recovered File 10**     | **00335017.doc** — Microsoft Word document, **11 MB**, Offset: **171,528,704 bytes**                    |
+<img width="975" height="458" alt="image" src="https://github.com/user-attachments/assets/64829c40-5063-45d3-8cc4-e81ae57dd0e2" />
+<img width="975" height="169" alt="image" src="https://github.com/user-attachments/assets/22b0a34b-df73-498c-aa9e-c34aad04e408" />
 
 ## Artifact 4: Recovered Personal Text Fragment Referencing Prior Data Destruction
 
@@ -191,7 +202,7 @@ key after this entry, but try not to destroy the good stuff. I need
 to change the password on the gnome account that Jeremy gave me. I
 can probably just do that at Radio Shack."
 
-Artifact 5: Duplicate File Identified via Hash Comparison
+## Artifact 5: Duplicate File Identified via Hash Comparison
 Description
 SHA-256 hashing of every recovered file (performed as a chain-of-custody step) showed that the JPEG recovered at offset 54,206,976 (00105873.jpg) and the JPEG recovered at offset 171,561,472 (00335081.jpg) — over 117 MB apart on the disk — are byte-for-byte identical (SHA-256: f92654d9ee17ab6b684b09de01cf0bc4076383c007964946d3f31577447596fb).
 Relevance
