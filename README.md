@@ -81,6 +81,7 @@ Integrity verification was performed by calculating the MD5 and SHA-256 hash val
 ## Why Matching Hashes Matter
 Matching hash values confirm that the forensic image has not been altered during the examination. This preserves the integrity and authenticity of the digital evidence and demonstrates that the analysis was conducted on an exact, unmodified copy of the original data. Any difference in hash values would indicate possible alteration or corruption of the evidence, requiring further investigation before the findings could be considered reliable.
 The hash values recorded above represent the values calculated for the image as examined. No independent, previously-recorded reference hash (e.g., a value generated at the point of acquisition by the seizing officers) was provided for direct comparison; consequently, this report records the calculated values as a verification baseline for this examination rather than as a confirmed match against an external record.
+
 <img width="750" height="209" alt="image" src="https://github.com/user-attachments/assets/940a1389-1c38-44c6-91b3-6e5973886164" />
 
 # Initial Triage
