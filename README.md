@@ -18,7 +18,7 @@ CASE EXERCISE: CAPTURE THE FLAG
 This report presents the findings of a digital forensic examination conducted on a forensic image (cartel.img) acquired from a USB storage device recovered by the Economic and Financial Crimes Commission (EFCC) on 2 August 2026, pursuant to a search warrant. The device was seized as part of a broader investigation, and the suspect associated with the device stated that it “only contains personal photographs.”
 The purpose of this examination was to test that claim against verifiable forensic evidence obtained from the image itself. This report documents the identification, preservation, examination, and analysis of the digital evidence contained within the image, and presents findings strictly on the basis of what was recovered and verified during the examination. No determination of guilt or innocence is made or implied by this report.
 Key findings are summarized below and are described in full detail in the corresponding sections of this report:
-- Integrity of the forensic image was verified using MD5 and SHA-256 hashing prior to examination (Section 5).
+Integrity of the forensic image was verified using MD5 and SHA-256 hashing prior to examination (Section 5).
 - Initial triage identified the image as a raw (dd-style), unpartitioned FAT16 volume, approximately 247.5 MB in size (Section 6).
 - Two allocated text files (GUMBO1.TXT and GUMBO2.TXT), containing recipes, were the only user-accessible files present on the volume at the time of examination. Their presence does not support the suspect's statement that the device contained only personal photographs (Section 7, Artifact 1).
 - Approximately 208 MB — more than 80% of the storage device — was found to contain two large regions of repetitive ASCII text (“SORRY” and “CHARLIE”), consistent with an intentional overwrite of previously stored data (Section 7, Artifact 2).
@@ -182,6 +182,7 @@ The image files were identified by scanning unallocated space with Binwalk, whic
 | **Recovered File 10**     | **00335017.doc** — Microsoft Word document, **11 MB**, Offset: **171,528,704 bytes**                    |
 <img width="975" height="458" alt="image" src="https://github.com/user-attachments/assets/64829c40-5063-45d3-8cc4-e81ae57dd0e2" />
 <img width="975" height="169" alt="image" src="https://github.com/user-attachments/assets/22b0a34b-df73-498c-aa9e-c34aad04e408" />
+<img width="313" height="469" alt="image" src="https://github.com/user-attachments/assets/96ea48a4-c13d-4732-903e-bf274b83c95f" />
 
 ## Artifact 4: Recovered Personal Text Fragment Referencing Prior Data Destruction
 
