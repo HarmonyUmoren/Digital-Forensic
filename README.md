@@ -18,7 +18,7 @@ CASE EXERCISE: CAPTURE THE FLAG
 This report presents the findings of a digital forensic examination conducted on a forensic image (cartel.img) acquired from a USB storage device recovered by the Economic and Financial Crimes Commission (EFCC) on 2 August 2026, pursuant to a search warrant. The device was seized as part of a broader investigation, and the suspect associated with the device stated that it “only contains personal photographs.”
 The purpose of this examination was to test that claim against verifiable forensic evidence obtained from the image itself. This report documents the identification, preservation, examination, and analysis of the digital evidence contained within the image, and presents findings strictly on the basis of what was recovered and verified during the examination. No determination of guilt or innocence is made or implied by this report.
 Key findings are summarized below and are described in full detail in the corresponding sections of this report:
-Integrity of the forensic image was verified using MD5 and SHA-256 hashing prior to examination (Section 5).
+- Integrity of the forensic image was verified using MD5 and SHA-256 hashing prior to examination (Section 5).
 - Initial triage identified the image as a raw (dd-style), unpartitioned FAT16 volume, approximately 247.5 MB in size (Section 6).
 - Two allocated text files (GUMBO1.TXT and GUMBO2.TXT), containing recipes, were the only user-accessible files present on the volume at the time of examination. Their presence does not support the suspect's statement that the device contained only personal photographs (Section 7, Artifact 1).
 - Approximately 208 MB — more than 80% of the storage device — was found to contain two large regions of repetitive ASCII text (“SORRY” and “CHARLIE”), consistent with an intentional overwrite of previously stored data (Section 7, Artifact 2).
@@ -26,7 +26,7 @@ Integrity of the forensic image was verified using MD5 and SHA-256 hashing prior
 - A recovered first-person text fragment, located within the CHARLIE-overwritten region, references the prior destruction of a hard drive and a stated intention to reformat the USB device under examination (Section 7, Artifact 4).
 - Hash comparison identified two byte-for-byte identical JPEG files recovered from disk locations over 117 MB apart, indicating the same file existed on the device on more than one occasion or prior to both overwrite events (Section 7, Artifact 5).
 - A total of nine deleted files were recovered from unallocated space through file carving (Section 8).
-- A relative event timeline was reconstructed from the limited verifiable evidence available; however, an absolutely-dated timeline could not be established from the image alone, and specific additional evidence would be required to do so (Section 9 and Section 10).
+ A relative event timeline was reconstructed from the limited verifiable evidence available; however, an absolutely-dated timeline could not be established from the image alone, and specific additional evidence would be required to do so (Section 9 and Section 10).
 Collectively, the evidence recovered from the forensic image is inconsistent with the suspect's statement that the device contained only personal photographs. This report does not draw any conclusion beyond what is directly supported by the recovered evidence, and clearly identifies areas where information was not available within the scope of this examination.
 
 ## Case Background and Scope
